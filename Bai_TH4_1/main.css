@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+body {
+  line-height: 1.5;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  outline: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.title {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.title:hover {
+    color: blue;
+}
+.btn {
+    display: block;
+    cursor: pointer;
+    border: 0;
+    padding: 0.5rem 2rem;
+    border-radius: 5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Poppins";
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1rem;
+    width: 350px;
+    z-index: 1;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: darkred;
+}
+.btn:hover {
+    background-color: chartreuse;
+    color: #fff;
+}
+.btn::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background-color: aquamarine;
+}
+.btn-left::before {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: width 1s linear;
+}
+.btn-left:hover::before {
+    width: 100%;
+}
